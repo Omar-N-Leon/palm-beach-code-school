@@ -1,0 +1,28 @@
+body {
+    background-color: darkslategrey;
+}
+table {
+    background-color: white;
+    width: 1200px
+}
+td {
+    width: 400px
+}
+#image-titles {
+    font-weight: bold;
+}
+#brand-nutshell {
+    font-weight: bold;
+    color: green;
+}
+#brand-description {
+    font-style: italic;
+}
+img {
+    width: 275px;
+    height: 275px;
+}
+#nike {
+    width: 350px;
+    height: 150px;
+}

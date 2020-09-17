@@ -1,0 +1,102 @@
+.container {
+    width: 1024px;
+    border-radius: 20%;
+}
+
+header {
+    width: 1024px;
+    height: 10em;
+    background: #758184;
+    padding-top: .05em;
+}
+
+header h1{
+    text-align: center;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    transform: scale(1.25);
+}
+
+header h2 {
+    color: #e1f4f3;
+    font-family: 'Raleway', sans-serif;
+    float: left;
+    padding-left: 2em;
+}
+
+aside {
+    float: right;
+    padding-right: 2em;
+}
+
+/* header end */
+
+nav {
+    width: 1024px;
+    height: 3em;
+    background: #333333;
+    clear: both;
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+.nav1 {
+    text-align: center;
+}
+
+nav img {
+    padding: 5px 5px 0px 20px;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: #e1f4f3;
+    padding-left: 70px;
+}
+
+/* nav end */
+
+.main {
+    width: 1024px;
+    background-image: url(../images/background.jpg);
+    float: left;
+    clear: both;
+}
+.samples{
+    color: #959e9b;
+    font-family: 'Raleway', sans-serif;
+    float: left;
+    margin: 50px;
+}
+
+.section {
+    margin-left: 50px;
+    width: 85%;
+    height: 650px;
+    background-color: 0, 0, 0, .50;
+    float: left;
+    clear: both;
+}
+.stack1 {
+    width: 100%;
+    height: 100px;
+    float: left;
+    clear: both;
+    margin-bottom: 30px;
+}
+.stack2 {
+    width: 100%;
+    float: left;
+    clear: both;
+}
+.links {
+    float: left;
+    margin-left: 15px;
+}
+
+
+footer {
+    width: 1024px;
+    float: left;
+    clear: both;
+}

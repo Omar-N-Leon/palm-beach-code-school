@@ -1,0 +1,52 @@
+<table border="1">
+    <tr>
+        <th>Task</th>
+        <th>SQL</th>
+    </tr>
+    <tr>
+        <td>Show all records</td>
+        <td>SELECT * FROM users;</td>
+    </tr>
+    <tr>
+        <td>Show all records in FL</td>
+        <td>SELECT * FROM users WHERE state = "FL" ;</td>
+    </tr>
+    <tr>
+        <td>Show just the first and last names of the records in FL</td>
+        <td>SELECT fname, lname FROM users WHERE state = "FL" ;</td>
+    </tr>
+    <tr>
+        <td>Show all records NOT in FL</td>
+        <td>SELECT * FROM users WHERE state != "FL" ;</td>
+    </tr>
+    <tr>
+        <td>Show all records in FL that have no cars</td>
+        <td>SELECT * FROM users WHERE cars = 0</td>
+    </tr>
+    <tr>
+        <td>Show all records in FL and display them alphabetically by last name</td>
+        <td>SELECT * FROM users WHERE state = "FL" ORDER BY lname ; </td>
+    </tr>
+    <tr>
+        <td>Show just the records where the state is NULL</td>
+        <td>SELECT * FROM users WHERE state IS NULL ;</td>
+    </tr>
+    <tr>
+        <td>Show the most recent 3 people who have opted in</td>
+        <td>SELECT * FROM users WHERE opt_out = 0 ORDER BY `users`.`opt_in_date` DESC LIMIT 3</td>
+    </tr>
+    <tr>
+        <td>Change Betty Doe's email address from betty@test.test to bdoe@test.test.</td>
+        <td>UPDATE users SET email = "bdoe@test.test" WHERE id = 6 ;</td>
+    </tr>
+    <tr>
+        <td>Change Sue Jones from FL to NY</td>
+        <td>UPDATE users SET state = "NY" WHERE id = 2 ;</td>
+    </tr>
+    <tr>
+        <td>Add a new record for Bill Williams, bwilliams@test.test, NJ, 5 cars, opted in June 23,2013</td>
+        <td>INSERT INTO users VALUES (NULL, "Bill", "Williams", "bwilliams@test.test", "NJ", 5, "2013-06-23", 0) ; </td>
+    </tr>
+</table>
+
+

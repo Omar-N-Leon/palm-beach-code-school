@@ -1,0 +1,18 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.left {
+    width: 70%;
+    float: left;
+    height: 200px;
+    background-color: yellow;
+}
+
+.right {
+    width: 30%;
+    height: 200px;
+    float: left;
+    background-color: teal;
+}

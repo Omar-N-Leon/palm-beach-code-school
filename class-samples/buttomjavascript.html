@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>Click me for Red!</button>
+    <button id="blueButton">Click me for Blue!</button>
+    <button id="greenButton">Click me for Green!</button>
+</body>
+<script>
+    function makeItRed() {
+        document.querySelector('div').style.backgroundColor = 'red'
+    }
+    function makeItBlue() {
+        document.querySelector('div').style.backgroundColor = 'blue'
+    }
+    function makeItGreen() {
+        document.querySelector('div').style.backgroundColor = 'green'
+    }
+    function makeItWhite() {
+        document.querySelector('div').style.backgroundColor = 'white'
+    }
+    document.querySelector ('button').addEventListener('click', makeItRed)
+    document.querySelector ('#blueButton').addEventListener('click', makeItBlue)
+    document.querySelector ('#greenButton').addEventListener('click', makeItGreen)
+    document.querySelector ('div').addEventListener('click', makeItWhite)
+</script>
+</html>

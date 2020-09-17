@@ -1,0 +1,9 @@
+tr:nth-child(odd) {
+background-color: lightgray;
+white-space: pre;
+}
+
+tr:nth-child(even){
+background-color: lightslategray;
+white-space: pre;
+}

@@ -1,0 +1,20 @@
+header {
+    background-image: url(../images/lion.jpg);
+    width: 900px;
+    height: 381px;
+    opacity: 0.5;
+}
+
+aside {
+    background: #524e4e;
+    width: 300px;
+    height: 300px;
+    margin: 0 0 0 20px;
+    color: #000000;
+
+
+}
+
+h1 {
+    color: white;
+}

@@ -1,0 +1,68 @@
+.container, header, nav, section {
+    width: 1024px;
+}
+div {
+    margin: 0em;
+    padding: 0em;
+}
+
+header, .header {
+
+    background-color: khaki;
+    float: left;
+}
+
+.header {
+    margin-right: 1em;
+    padding-left: 1em;
+}
+
+nav {
+    background-color: white;
+    float: left;
+    clear: both;
+}
+
+.logo {
+    float: left;
+}
+.nav {
+    float: left;
+    margin-left: 2em;
+    margin-top: 2em;
+    
+}
+
+section {
+    background-color: cornflowerblue;
+    height: 600px;
+}
+
+.img {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 0em;
+    float: left;
+    background-color: cornflowerblue;
+}
+
+.copyright {
+    margin-top: 0em;
+    padding-top: 0em;
+    float: left;
+    clear: both;
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+.big {
+    width: 500px;
+}
+.smallimg {
+    width: 200px;
+}
+
+
+a:link {
+    color: black;
+}

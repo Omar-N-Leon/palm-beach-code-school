@@ -1,0 +1,46 @@
+body {
+    background-color: grey;
+}
+div {
+    width: 1024 px;
+    background-color: grey;
+}
+
+header {
+    width: 1024px;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+
+nav {
+    width: 1024px;
+    height: 70px;
+    float: left;
+    clear: both;
+    background-color: black;
+}
+
+article {
+    width: 300px;
+    height: 200px;
+    float: left;
+    clear: both;
+    background-color: white;
+    margin-left: 20px;
+}
+
+aside {
+    width: 300px;
+    height: 200px;
+    float: left;
+    background-color: white;
+    margin-left: 20px;
+}
+
+footer {
+    width: 1024px;
+    height: 70px;
+    float: left;
+    clear: both;
+    background-color: honeydew;
+}

@@ -1,0 +1,67 @@
+body {
+    background-color: #eeeeee;
+}
+
+hr {
+    width: 70%;
+    padding: 1rem;
+}
+.pbcs-logo {
+    width: 125px;
+}
+
+.carousel-item {
+    opacity: .50;
+}
+
+.card-group {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.table {
+    margin: 0 auto;
+    width: 70%;
+}
+
+tr {
+    margin-top: 2px;
+}
+
+.table_images {
+    text-align: center;
+}
+
+.table_titles {
+    text-align: center;
+    color: #f6891c;
+    opacity: .80;
+}
+
+section {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#courses {
+    background-color: rgba(189, 220, 222, .50);
+}
+#instructors {
+    background: white;
+}
+
+.section_titles {
+    padding-top: 1rem;
+    padding-left: .5rem;
+    color: #f6891c;
+    opacity: .80;
+}
+.section_p {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.card-group2 {
+    padding-top: 5rem;
+    width: 100%;
+}

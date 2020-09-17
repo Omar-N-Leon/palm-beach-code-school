@@ -1,0 +1,36 @@
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.search {
+    margin-bottom: 30px;
+}
+.img {
+    float: left;
+    width: 33%;
+}
+footer {
+    width: 1024px;
+    margin-top: 30px;
+    float: left;
+}
+
+p {width: 100%;}
+
+
+
+/* Media Queries */
+@media only screen and (max-width: 959px) {
+    .img {
+        width: 50%;
+    }
+    p {width: 75%;}
+}
+
+@media only screen and (max-width: 774px) {
+    .img {
+        width: 100%;
+    }
+    p {width: 30%;}
+}

@@ -1,0 +1,6 @@
+body {background-color: rgb(83, 81, 81);}
+div {font-weight: bolder;}
+div#div1 {color: indigo;}
+div.div2 {color: goldenrod;}
+li#yellow {color: khaki;}
+li#red {color: tomato;}

@@ -1,0 +1,155 @@
+<head>
+
+    <link rel="stylesheet" href="css/mysql2.css">
+</head>
+
+
+<body>
+    
+
+<table border="1">
+    <tr >
+        <th>Task</th>
+        <th>SQL</th>
+    </tr>
+    <tr class="">
+        <td>Show each customer’s first name, last name, and their state’s population</td>
+        <td>    
+            SELECT 
+                users.fname, users.lname, users.state, states.population 
+            FROM 
+                `users` 
+            LEFT JOIN 
+                states 
+            ON 
+                (users.state = states.state);
+        </td>
+    </tr>
+    <tr >
+        <td>Show the following information for all sales: customer first name, last name, item
+            purchased, and date purchased</td>
+        <td>
+            SELECT 
+                users.fname, users.lname, sales.item, sales.dt 
+            FROM 
+                `sales` 
+            LEFT JOIN 
+                users 
+            ON 
+                (users.id = sales.cust_id);
+        </td>
+    </tr>
+    <tr >
+        <td>Show the total dollar amount purchased by each customer</td>
+        <td>
+            SELECT 
+                users.fname, users.lname, SUM(sales.price) 
+            FROM 
+                `sales` 
+            LEFT JOIN 
+                users 
+            ON 
+                (users.id = sales.cust_id) 
+            GROUP BY sales.cust_id;
+        </td>
+    </tr>
+    <tr >
+        <td>Show the most expensive dollar amount purchased by each customer</td>
+        <td>
+            SELECT 
+                users.fname, users.lname, MAX(sales.price) 
+            FROM 
+                `sales` 
+            LEFT JOIN 
+                users 
+            ON 
+                (users.id = sales.cust_id) 
+            GROUP BY sales.cust_id;
+        </td>
+    </tr>
+    <tr >
+        <td>Show the customers who made the most purchases</td>
+        <td>
+            SELECT 
+                fname, lname, COUNT(sales.price) 
+            FROM 
+                `sales` 
+            LEFT JOIN 
+                `users` 
+            ON 
+                (users.id = sales.cust_id) 
+            GROUP BY 
+                sales.cust_id 
+            HAVING
+                COUNT(sales.id) =
+                    (SELECT 
+                        COUNT(sales.price) 
+                    FROM 
+                        `sales` 
+                    LEFT JOIN 
+                        `users` 
+                    ON 
+                        (users.id = sales.cust_id) 
+                    GROUP BY 
+                        sales.cust_id 
+                    ORDER BY 
+                        COUNT(sales.price) DESC LIMIT 1)
+            ORDER BY 
+                COUNT(sales.price) DESC;
+        </td>
+    </tr>
+    <tr >
+        <td>Show the customers who spent the most money</td>
+        <td>
+            SELECT 
+                fname, lname, SUM(sales.price) 
+            FROM 
+                `sales` 
+            LEFT JOIN 
+                `users` 
+            ON 
+                (users.id = sales.cust_id) 
+            GROUP BY 
+                sales.cust_id 
+            HAVING
+                SUM(sales.price) =
+                    (SELECT 
+                        SUM(sales.price) 
+                    FROM 
+                        `sales` 
+                    LEFT JOIN 
+                        `users` 
+                    ON 
+                        (users.id = sales.cust_id) 
+                    GROUP BY 
+                        sales.cust_id 
+                    ORDER BY 
+                        SUM(sales.price) DESC LIMIT 1)
+            ORDER BY 
+                SUM(sales.price) DESC;
+        </td>
+    </tr>
+    <tr >
+        <td>Show the states in order of which had the most sales. (Display the states’ full
+            names, not abbreviations.)</td>
+        <td>
+            SELECT 
+                states.states_names, SUM(sales.price)
+            FROM
+                sales
+            LEFT JOIN
+                users
+            ON	
+                (users.id = sales.cust_id)
+            LEFT JOIN
+                states
+            ON 
+                (states.state = users.state)
+            GROUP BY 
+                states.state
+            ORDER BY
+                SUM(sales.price);
+        </td>
+    </tr>
+</table>
+</body>

@@ -1,0 +1,29 @@
+
+<div id="stuff"></div>
+
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+
+<script>
+
+$.ajax(
+	{
+		method: "GET",
+		url: "https://swapi.dev/api/people/",
+		dataType: "json"
+	}
+)
+.done(
+	function( data ) {
+	    console.log( "Got it!", data );
+	    for ( var i=0; i < data.length; i++ ) {
+            console.log()
+	    }
+	}
+)
+.fail(
+	function( err ){
+	    console.log( "Failed!", err );
+    }
+);
+
+</script>

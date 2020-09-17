@@ -1,0 +1,9 @@
+.jumbotron-fluid {
+    background-image: url(../images/enhanced-start/jumbo-bg.jpg);
+    background-size: cover;
+}
+
+.navbar .navbar-brand{
+    color:rgba(10,30,20,0.2);
+    font-size: 1rem;
+}

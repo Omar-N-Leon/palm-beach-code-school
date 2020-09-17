@@ -1,0 +1,136 @@
+<head>
+
+    <link rel="stylesheet" href="css/mysql2.css">
+</head>
+
+
+<body>
+    
+
+<table border="1">
+    <tr >
+        <th>Task</th>
+        <th>SQL</th>
+    </tr>
+    <tr class="">
+        <td>How many people are in database</td>
+        <td>    
+            SELECT 
+                COUNT(id) 
+            FROM 
+                users;
+        </td>
+    </tr>
+    <tr >
+        <td>How many people are from New York?</td>
+        <td>
+            SELECT 
+                COUNT(id) 
+            FROM 
+                users 
+            WHERE 
+                state = "NY";
+        </td>
+    </tr>
+    <tr >
+        <td>How many people have opted out in total</td>
+        <td>
+            SELECT 
+                COUNT(opted_out) 
+            FROM 
+                users;
+        </td>
+    </tr>
+    <tr >
+        <td>Show each state and the number of people in that state</td>
+        <td>
+            SELECT 
+                state, COUNT(state) 
+            FROM 
+                users 
+            GROUP BY 
+                state;
+        </td>
+    </tr>
+    <tr >
+        <td>How many total cars are owned?</td>
+        <td>
+            SELECT 
+                SUM(cars) 
+            FROM 
+                users;
+        </td>
+    </tr>
+    <tr >
+        <td>How many total cars are owned by people in FL?</td>
+        <td>
+            SELECT 
+                SUM(cars) 
+            FROM 
+                users 
+            WHERE 
+                state = "FL";
+        </td>
+    </tr>
+    <tr >
+        <td>What are the most number of cars owned by any one person?</td>
+        <td>
+            SELECT 
+                MAX(cars) 
+            FROM 
+                users;
+        </td>
+    </tr>
+    <tr >
+        <td>What are the least number of cars owned by any one person?</td>
+        <td>
+            SELECT 
+                MIN(cars) 
+            FROM 
+                users;
+        </td>
+    </tr>
+    <tr >
+        <td>How many cars are owned by each family(by last name) in order of which family has most cars?</td>
+        <td>
+            SELECT 
+                lname, SUM(cars) 
+            FROM 
+                users 
+            GROUP BY 
+                lname 
+            ORDER BY 
+                SUM(cars) DESC;
+        </td>
+    </tr>
+    <tr >
+        <td>How many cars are owned in each state by Smiths in order of which state had the most cars?</td>
+        <td>
+            SELECT 
+                SUM(cars), lname, state 
+            FROM 
+                users 
+            WHERE 
+                lname = "Smith" 
+            GROUP BY 
+                state 
+            ORDER BY 
+                SUM(cars) DESC;
+        </td>
+    </tr>
+    <tr >
+        <td>Show the states where Smiths own more than 2 cars.</td>
+        <td>
+            SELECT 
+                state, SUM(cars) 
+            FROM 
+                users 
+            WHERE 
+                lname = "Smith" 
+            GROUP BY 
+                state 
+            HAVING 
+                SUM(cars) > 2;</td>
+    </tr>
+</table>
+</body>
